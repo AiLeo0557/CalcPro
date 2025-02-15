@@ -160,3 +160,4 @@ const calc = HiCalcPro.create;
 export { HiCalcPro, calc };
 // 默认导出
 export default HiCalcPro;
+//TODO: const res = HiCalcPro.create().solveEquation("2x + 1 = 0").value  // Output: -0.5
