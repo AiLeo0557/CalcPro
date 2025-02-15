@@ -1,5 +1,5 @@
 {
-  "name": "calc-pro",
+  "name": "hi-calc-pro",
   "version": "1.0.0",
   "description": "A lightweight plugin for basic math operations",
   "main": "dist/bundle.js",
