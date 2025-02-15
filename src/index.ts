@@ -97,7 +97,7 @@ export const accumulateSub = createAccumulateOperation(sub);
 export const accumulateMul = createAccumulateOperation(mul);
 // 生成累计除函数
 export const accumulateDiv = createAccumulateOperation(div);
-class CalcPro {
+class HiCalcPro {
   // 四则运算开始标识
   private start: boolean = true;
   // 计算结果保留小数位数
@@ -113,11 +113,11 @@ class CalcPro {
     this.decimalPlaces = decimalPlaces;
   }
   // 生成一个计算器实例
-  public static create(decimalPlaces?: number): CalcPro {
-    return new CalcPro(decimalPlaces);
+  public static create(decimalPlaces?: number): HiCalcPro {
+    return new HiCalcPro(decimalPlaces);
   }
   // 计算方法生成器
-  private operationGenerator = (type: Operator, args: number[]): CalcPro => {
+  private operationGenerator = (type: Operator, args: number[]): HiCalcPro => {
     switch (type) {
       case Operator.ADD:
         this._value = accumulateAdd.call(this, [this._value, ...args]); // 累加
@@ -137,23 +137,26 @@ class CalcPro {
     return this;
   }
   // 加法
-  public add(...args: number[]): CalcPro {
+  public add(...args: number[]): HiCalcPro {
     return this.operationGenerator(Operator.ADD, args);
   }
   // 减法
-  public sub(...args: number[]): CalcPro {
+  public sub(...args: number[]): HiCalcPro {
     return this.operationGenerator(Operator.SUB, args);
   }
   // 乘法
-  public mul(...args: number[]): CalcPro {
+  public mul(...args: number[]): HiCalcPro {
     return this.operationGenerator(Operator.MUL, args);
   }
   // 除法
-  // 定义一个div方法，接收一个或多个number类型的参数，返回一个CalcPro类型的对象
-  public div(...args: number[]): CalcPro {
-    // 调用operationGenerator方法，传入Operator.DIV和args参数，返回一个CalcPro类型的对象
+  // 定义一个div方法，接收一个或多个number类型的参数，返回一个HiCalcPro类型的对象
+  public div(...args: number[]): HiCalcPro {
+    // 调用operationGenerator方法，传入Operator.DIV和args参数，返回一个HiCalcPro类型的对象
     return this.operationGenerator(Operator.DIV, args);
   }
 }
+const calc = HiCalcPro.create;
+// 导出类
+export { HiCalcPro, calc };
 // 默认导出
-export default CalcPro;
+export default HiCalcPro;

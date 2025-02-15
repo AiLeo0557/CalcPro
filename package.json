@@ -28,5 +28,16 @@
     "terser": "^5.39.0",
     "ts-jest": "^29.2.5",
     "typescript": "^5.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiLeo0557/CalcPro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AiLeo0557/CalcPro/issues"
+  },
+  "homepage": "https://github.com/AiLeo0557/CalcPro#readme"
 }
