@@ -7,3 +7,18 @@
 
 ### Installation:
 1. Clone the repository using the command `git clone https://github.com/your-username/calcpro.git`. Replace `your-username` with your GitHub username.  
+
+### Change-log:
+#### Version 1.0:
+1. Version 1.0: Initial release with basic arithmetic operations and algebraic equation solver.
+
+
+### Usage:
+
+``` typscript
+import { HiCalcPro, calc } from "hi-calc-pro";
+
+const res = HiCalcPro.create().add(0.1, 0.2).value // Output: 0.3
+const res1 = calc().add(0.1, 0.2).value // Output: 0.3
+
+```
